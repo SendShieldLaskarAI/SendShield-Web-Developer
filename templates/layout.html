@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SendShield</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="/" class="logo">
+          <img src="../static/images/logo.svg" alt="logo" />
+          <span>SendShield</span></a
+        >
+        <nav class="main-nav">
+          <a href="#about">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <ul class="flashes">
+        {% for category, msg in messages %}
+        <li class="{{ category }}">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %} {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="contact-info">
+          <div>
+            <strong>Address</strong><br />
+            Jl. Mulyorejo Utara No.191, Mulyorejo,<br />
+            Surabaya, Jawa Timur, 60115
+          </div>
+          <div>
+            <strong>Phone</strong><br />
+            +62 81345962344 – Admin 1<br />
+            +62 85645832921 – Admin 2
+          </div>
+          <div>
+            <strong>Email</strong><br />
+            SendShield@gmail.com
+          </div>
+        </div>
+        <div class="footer-bottom">© 2025 SendShield • All Rights Reserved</div>
+      </div>
+    </footer>
+  </body>
+</html>

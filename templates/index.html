@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% block content %}
+<section class="shield-body container">
+  <div class="shield-text">
+    <h1>SendShield</h1>
+    <h2>Deteksi Dan Pencegahan Komentar Cyberbullying</h2>
+    <p>
+      Lindungi Percakapan, Ciptakan Ruang Aman.<br />
+      SendShield adalah solusi cerdas yang mendeteksi dan mencegah komentar
+      cyberbullying secara real-time, menjaga komunitas digital tetap positif
+      dan aman.
+    </p>
+    <a href="#about" class="btn primary">Learn More →</a>
+    <a href="#shield" class="btn outline">Try →</a>
+  </div>
+  <div class="shield-img">
+    <img src="../static/images/illustration.svg" alt="Illustration" />
+  </div>
+</section>
+
+<!-- About & Services -->
+<section id="about" class="shield-body container">
+  <div class="shield-text">
+    <div class="pill">
+      <h3>About Us</h3>
+      <p>
+        SendShield, website yang bertujuan menciptakan ruang digital yang lebih
+        aman...
+      </p>
+    </div>
+    <div class="pill">
+      <h3>Our Service</h3>
+      <p>
+        Di SendShield, kami membuat proses deteksi cyberbullying menjadi
+        mudah...
+      </p>
+      <a href="#shield" class="btn outline small">Try →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Shield Your Words -->
+<section id="shield" class="shield container">
+  <h2>Shield Your Words</h2>
+  <form method="post">
+    <textarea name="message" placeholder="Have anything to say?"></textarea>
+    <button type="submit" class="btn primary">Send</button>
+  </form>
+</section>
+
+<!-- Contact Us -->
+<section id="contact" class="contact container">
+  <h2>Contact Us</h2>
+  <form method="post" class="contact-form">
+    <label>Name:<input type="text" name="name" /></label>
+    <label>Email:<input type="email" name="email" /></label>
+    <label>Message:<textarea name="message"></textarea></label>
+    <button type="submit" class="btn secondary">Submit</button>
+  </form>
+</section>
+{% endblock %}
